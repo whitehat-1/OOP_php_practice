@@ -28,7 +28,8 @@ class Car {
         return "The car model is " . $this -> model;
         }
         }
-        $mercedes = new Car();
+        $mercedes = new Car(); //instantiation of the class car
+
         // We try to access a private property from outside the class.
         $mercedes -> model = "Mercedes";
         echo $mercedes -> getModel();
