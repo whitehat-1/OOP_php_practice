@@ -27,9 +27,13 @@ class User {
     // Constructor function to set more than one value
     public function __construct($firstName,$lastName) 
      { 
-      $this -> firstName = $firstName; $this -> lastName = $lastName; }
-    public function getFullName() { 
+      $this -> firstName = $firstName; 
+      $this -> lastName = $lastName; 
+    }
+    public function getFullName() 
+    { 
         return $this -> firstName . ' ' . $this -> lastName; }
     }
-    $user1 = new User("Jerry", "Doe");
+
+$user1 = new User("Jerry", "Doe");
     
