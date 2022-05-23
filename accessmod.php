@@ -48,5 +48,27 @@ class Car {
     $mercedes -> setModel("Mercedes");
     // Get the car’s model 
     echo $mercedes -> getModel();
+//Result: The car model is Mercedes
 
-    //Result: The car model is Mercedes
+// we can create a function to validate only specific cars
+
+class Car{
+    private $model;
+    public function setModel($model){
+        $allowedModels = ["Mercedes", "BMW", "Toyota"];
+
+        if(in_array($model, $allowedModels)){
+            $this -> model = $model;
+        }
+        else{
+            $this -> model ="Model Not known";
+        }
+    }
+    public function grtModel(){
+        return "The car model is" . $this -> model;
+    }
+}
+
+$mercedes = new Car();
+$mercedes -> setModel("Mercedes");
+echo $mercedes -> getModel();
